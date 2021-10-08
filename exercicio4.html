@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            4) Escreva código com JSX, diretamente em uma página HTML, para calcular a média 
+            ponderada de três notas.
+            
+        </div>
+
+        <div id="root"></div>
+        <script>
+            function mediaPonderada() {
+                var nota1 = +prompt(" Informe a primeira nota 1: ")
+                var peso1 = +prompt("informe o peso da nota 1: ")
+                var nota2 = +prompt(" Informe a segunda nota 2: ")
+                var peso2 = +prompt(" nforme o peso da nota 2: ")
+                var nota3 = +prompt(" Informe a terceira nota 3: ")
+                var peso3 = +prompt(" nforme o peso da nota 3: ")
+
+                //Calculo da mediaPonderada
+                var mediaPonderada = (((nota1 * peso1) + (nota2 * peso2) + (nota3 * peso3)) / (peso1 + peso2 + peso3))
+                document.write(`A média ponderada de nota 1: ${nota1} peso 1: ${peso1} ,
+                nota 2: ${nota2} peso 2: ${peso2} , nota 3: ${nota3} peso 3: ${peso3}  ${"<br/>"} Media poderada: ${mediaPonderada}` )
+
+            }
+            ReactDOM.render(mediaPonderada(), document.getElementById('root'));
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Exemplo 04</title>
+    <!-- 3 CDNs - React, React DOM e Babel -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div>
+        7) Escreva código com JSX, diretamente em uma página HTML, para inserir as tags de 
+        cabeçalhos (de "h1" a "h6").
+    </div>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+        /* Para escrever múltiplas linhas de HTML, como por exemplo
+        uma lista, coloque o HTML dentro de parenteses.
+        */
+        const meuElemento = (
+
+            <div>
+                <h6>Esse é o h6</h6>
+                <h5>Esse é o h5</h5>
+                <h4>Esse é o h4</h4>
+                <h3>Esse é o h3</h3>
+                <h2>Esse é o h2</h2>
+                <h1>Esse é o h1</h1>
+            </div>
+        
+        );
+        ReactDOM.render(meuElemento, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
